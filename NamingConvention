@@ -1,0 +1,6 @@
+| Company | Department | Product Line or Service | Environment | Full Name  |
+----------| ---------- | ----------------------- | ----------- | ---------- |
+| Contoso | SocialGaming | AwesomeService | Production | Contoso SocialGaming AwesomeService Production |
+| Contoso | SocialGaming | AwesomeService | Dev | Contoso SocialGaming AwesomeService Dev |
+| Contoso | IT | InternalApps | Production | Contoso IT InternalApps Production |
+| Contoso | IT | InternalApps | Dev | Contoso IT InternalApps Dev |
