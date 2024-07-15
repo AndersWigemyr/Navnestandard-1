@@ -14,12 +14,44 @@ Dette dokumentet beskriver et **forslag** til navnestandarder som skal brukes i 
 3. **Revisjon:** Gjennomfør regelmessige revisjoner for å sikre at navnestandarder følges.
 4. **Opplæring:** Gi opplæring til alle relevante medarbeidere om viktigheten av og retningslinjene for navnestandarder.
 
+## Navnestandard for Subscriptions
+Et Azure Subscription er en konto som gir tilgang til Azure-tjenester og fungerer som en container for ressurser som virtuelle maskiner, databaser, lagringskontoer og mye mer. Hver subscription har en unik ID og kan være assosiert med en spesifikk organisasjon eller avdeling.
 
-| Company | Department | Product Line or Service | Environment | Full Name  |
-----------| ---------- | ----------------------- | ----------- | ---------- |
-| Contoso | SocialGaming | AwesomeService | Production | Contoso SocialGaming AwesomeService Production |
-| Contoso | SocialGaming | AwesomeService | Dev | Contoso SocialGaming AwesomeService Dev |
-| Contoso | IT | InternalApps | Production | Contoso IT InternalApps Production |
-| Contoso | IT | InternalApps | Dev | Contoso IT InternalApps Dev |
+### Forslag til navnestandard for Subscriptions
+Under er et forslag til navnestandard for alle Subscriptions som blir opprettet i Azure miljøet. 
+
+Navnestruktur: 
+`{selskap}-{avdeling eller prosjekt (valgfritt)}-{miljø}-sub` skrives med små bokstaver.
+
+Tabellen under viser et eksempel på hvordan navnestrukturen kan se ut.
+
+| Selskap | Avdeling eller Prosjekt (valgfritt) | Miljø | Subscription Navn           |
+|---------|-------------------------------------|-------|-----------------------------|
+| Contoso | TSS                                 | utv   | contoso-tss-utv-sub         |
+| Contoso | TIKT                                | prod  | contoso-tikt-prod-sub       |
+| Contoso | TMA                                 | utv   | contoso-tma-utv-sub         |
+| Contoso | B024 *(eksempel på prosjekt)*       | utv   | contoso-b024-utv-sub        |
+
+
+## Navnestandard for Tags
+
+### Noen vanlige brukstilfeller for tagging inkluderer:
+
+Fakturering: Gruppe ressurser og assosiere dem med fakturering eller kostnadskoder.
+Tjenestekontekstidentifikasjon: Identifisere grupper av ressurser på tvers av ressursgrupper for felles operasjoner og gruppering.
+Tilgangskontroll og sikkerhetskontekst: Administrativ rolleidentifikasjon basert på portefølje, system, tjeneste, app, instans, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
