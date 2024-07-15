@@ -21,7 +21,7 @@ Dette dokumentet beskriver et **forslag** til navnestandarder som skal brukes i 
 
 ## Navnestandard for Subscriptions
 Et Azure Subscription er en konto som gir tilgang til Azure-tjenester og fungerer som en container for ressurser som virtuelle maskiner, databaser, lagringskontoer og mye mer. Hver subscription har en unik ID og kan være assosiert med en spesifikk organisasjon eller avdeling.
-
+  
 ### Forslag til navnestandard for Subscriptions
 Under er et forslag til navnestandard for alle subscriptions som blir opprettet i Azure miljøet. 
 
@@ -37,7 +37,6 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for subscriptions k
 | Contoso | TMA                                 | utv   | contoso-tma-utv-sub         |
 | Contoso | B024 *(eksempel på prosjekt)*       | utv   | contoso-b024-utv-sub        |
 
-
 ## Navnestandard for Tags
 Tags i Azure brukes til å organisere og kategorisere ressurser, noe som gjør administrasjon og rapportering enklere og mer effektivt.
 
@@ -45,18 +44,29 @@ Tags i Azure brukes til å organisere og kategorisere ressurser, noe som gjør a
 
 - **Fakturering:** Gruppe ressurser og assosiere dem med fakturering eller kostnadskoder.
 - **Tjenestekontekstidentifikasjon:** Identifisere grupper av ressurser på tvers av ressursgrupper for felles operasjoner og gruppering.
-- **Forvalter eller kontaktperson:** Gjøre det enkelt for personer som ikke har kjennskap til ressurssene å finne kontaktpersoner.
+- **Forvalter eller kontaktperson:** Gjøre det enkelt for personer som ikke har kjennskap til ressursene å finne kontaktpersoner.
+
+For Tags bruker vi **camelCase** som er en skrivemåte der hvert ord i en sammensatt ordsekvens starter med en stor bokstav, unntatt det første ordet, og det er ingen mellomrom eller spesialtegn mellom ordene (f.eks. forvaltesAv eller prosjektNavn).
 
 Tabellen under viser et eksempel på hvordan navnestrukturen for tags kan se ut.  
 
-| Tagg Navn                                 | Nøkkel        | Eksempel                   | Kommentar                                  |
-|-------------------------------------------|---------------|----------------------------|--------------------------------------------|
-| Faktureres Til / Intern Kostnads-ID       | fakturaTil        | IT-Chargeback-1234         | En intern I/O eller faktureringskode       |
-| Operatør eller Direkte Ansvarlig Individ (DRI) | forvaltetAv     | joe@contoso.com            | Alias eller e-postadresse                  |
-| Prosjektnavn                              | projectNavn  | myproject                  | Navn på prosjektet eller produktlinjen     |
-| Prosjektversjon                           | projectVersjon | 3.4                        | Versjon av prosjektet eller produktlinjen  |
-| Miljø                                     | miljo   | <Produksjon, Staging, QA>  | Miljøidentifikator                         |
-| Avdeling | avdeling | IT |
+| Tagg Navn                                 | Nøkkel           | Eksempel                        | Kommentar                                  |
+|-------------------------------------------|------------------|---------------------------------|--------------------------------------------|
+| Faktureres Til / Intern Kostnads-ID       | fakturaTil       | `TSS` eller `Intern Kostnads-ID`| Avdeling eller Intern Kostnads-ID          |
+| Forvalter eller kontaktperson             | forvaltesAv      | `joe@contoso.com`               | Alias eller e-postadresse                  |
+| Prosjektnavn (valgfritt)                  | prosjektNavn     | `B024`                          | Navn på prosjektet eller prosjekt ID       |
+| Prosjektversjon (valgfritt)               | prosjektVersjon  | `1.0`                           | Versjon av prosjektet                      |
+| Miljø                                     | miljø            | `<prod eller utv>`              | Miljøidentifikator (prod eller utv)        |
+| Avdeling                                  | avdeling         | `TSS`                           | Navn på avdelingen                         |
+
+
+## Navnestandard for Azure ressurser
+Ressurser i Azure refererer til de ulike komponentene som kan opprettes, administreres og brukes innenfor Azure-plattformen, som virtuelle maskiner, databaser, lagringskontoer, nettverk, og app-tjenester.
+
+## Forslag til navnestandard for Azure Ressurser
+
+
+
 
 
 
