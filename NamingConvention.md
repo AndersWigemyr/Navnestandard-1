@@ -59,6 +59,9 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for tags kan se ut.
 | Miljø                                     | miljø            | `<prod eller utv>`              | Miljøidentifikator (prod eller utv)        |
 | Avdeling                                  | avdeling         | `TSS`                           | Navn på avdelingen                         |
 
+## Policy for Tags
+En tagging policy i Azure er en regel eller et sett med regler som automatisk sørger for at ressurser blir merket med spesifikke tagger når de opprettes eller oppdateres. Disse reglene hjelper med å sikre at alle ressurser følger samme standard for tagging, noe som gjør det lettere å organisere, finne og administrere dem på tvers av organisasjonen. Når en ressurs opprettes i Azure kan man kreve at diverse tagger er lagt på denne ressursen.
+
 
 ## Navnestandard for Azure ressurser
 Ressurser i Azure refererer til de ulike komponentene som kan opprettes, administreres og brukes innenfor Azure-plattformen, som virtuelle maskiner, databaser, lagringskontoer, nettverk, og app-tjenester.
