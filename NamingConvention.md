@@ -1,7 +1,7 @@
-Hva gjør vi med:  
-Æ eller ae?  
-Ø eller o?  
-å eller a?
+# Spørsmål før ferdigstilling av dokument
+- Hva gjør vi med: Æ eller ae? Ø eller o? Å eller a?
+- Hvor mange subscriptions tenker man å ha i miljøet? Skal det være en del så bør man ha Management Groups.
+- Hvor mange avdelinger skal inn å bruke miljøet?
 
 #  Forslag til navnekonvensjon for Azure/Microsoft 365 miljø
 Dette dokumentet beskriver et **forslag** til navnestandarder som skal brukes i Azure og Microsoft 365 (M365) miljøer. Konsistente navnestandarder er avgjørende for enkel administrasjon, feilsøking, sikkerhet, og for å sikre at ressursene er lett gjenkjennelige.
@@ -57,7 +57,7 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for tags kan se ut.
 | Prosjektnavn (valgfritt)                  | prosjektNavn     | `B024`                          | Navn på prosjektet eller prosjekt ID       |
 | Prosjektversjon (valgfritt)               | prosjektVersjon  | `1.0`                           | Versjon av prosjektet                      |
 | Miljø                                     | miljø            | `<prod eller utv>`              | Miljøidentifikator (prod eller utv)        |
-| Avdeling                                  | avdeling         | `TSS`                           | Navn på avdelingen                         |
+| Avdeling                                  | avdeling         | `TSS`                           | Navn på avdeling                         |
 
 ### Policy for Tags
 En tagging policy i Azure er en regel eller et sett med regler som automatisk sørger for at ressurser blir merket med spesifikke tagger når de opprettes eller oppdateres. Disse reglene hjelper med å sikre at alle ressurser følger samme standard for tagging, noe som gjør det lettere å organisere, finne og administrere dem på tvers av organisasjonen. Når en ressurs opprettes i Azure kan man kreve at diverse tagger er lagt på denne ressursen *(eksempel at det må kreve en forvaltesAv- eller miljo-tag)*.
@@ -67,6 +67,7 @@ En tagging policy i Azure er en regel eller et sett med regler som automatisk s�
 Ressurser i Azure refererer til de ulike komponentene som kan opprettes, administreres og brukes innenfor Azure-plattformen, som virtuelle maskiner, databaser, lagringskontoer, nettverk, og app-tjenester.
 
 ## Forslag til navnestandard for Azure Ressurser
+
 
 
 
