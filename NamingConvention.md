@@ -71,6 +71,8 @@ Ressurser i Azure refererer til de ulike komponentene som kan opprettes, adminis
 Navnestruktur: 
 `{selskap}-{miljø}-{applikajon, prosjekt eller funksjon}-rg` skrives med små bokstaver.
 
+Tabellen under viser et eksempel på hvordan navnestrukturen for ressursgrupper kan se ut.  
+
 | Selskap | Miljø | Applikasjon, prosjekt eller funksjon | Navn på ressursgruppe                 |
 |---------|-------|--------------------------------------|---------------------------------------|
 | Contoso | utv   | hrsystem                             | contoso-hrsystem-utv-rg               |
@@ -82,10 +84,15 @@ Navnestruktur:
 # Forslag til navnestandard for Ressurser i Azure
 Hver ressurstype eller tjenestetype i Azure innebærer et sett med navnerestriksjoner og omfang; enhver navnekonvensjon eller mønster må overholde de nødvendige navnerestriksjonene og omfanget. For eksempel, mens navnet på en VM knyttes til et DNS-navn (og derfor må være unikt over hele Azure), er navnet på et VNET (virtuelt nettverk) begrenset til Ressursgruppen det er opprettet i, og kan derfor ha et samme navn i en annen ressursgruppe.
 
+Navnestruktur: 
+`<applikasjon, prosjekt eller funksjon>-<miljø>-<ressurs-forkortelse><0-99>` skrives med små bokstaver.
+
+Når det gjelder <ressurs-forkortelse> tar man utgangspunkt i Microsoft sine anbefalinger. Les mer om disse her: [Abbreviation recommendations for Azure resources - Microsoft](https://learn.microsoft.com/nb-no/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
+
 Generelt bør du unngå å ha spesialtegn (- eller _) som første eller siste tegn i noe navn, da disse vil feile de fleste valideringsregler.
 I tabellen under ser man en rekke ressurser som finnes i Azure, i tillegg til 
 
- For å lese mer om restriksjoner og krav for navn for ressurser, se her: [Naming rules and restrictions for Azure resources - Microsoft](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
+For å lese mer om restriksjoner og krav for navn for ressurser, se her: [Naming rules and restrictions for Azure resources - Microsoft](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
 
 
 | Kategori      | Tjeneste eller Enhet         | Omfang          | Lengde                    | Skriftform          | Gyldige Tegn                                | Foreslått Mønster                           |
@@ -110,12 +117,7 @@ I tabellen under ser man en rekke ressurser som finnes i Azure, i tillegg til
 | Nettverk      | Lastbalanserer              | Ressursgruppe    | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `<service or role>-lb`                      |
 | Nettverk      | Lastbalanseringsregler      | Lastbalanserer   | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `descriptive context`                       |
 
-
-Navnestruktur: 
-`<applikasjon, prosjekt eller funksjon>-<miljø>-<ressurs-forkortelse><0-99>` skrives med små bokstaver.
-
-Når det gjelder <ressurs-forkortelse> tar man utgangspunkt i Microsoft sine anbefalinger. Les mer om disse her: [Abbreviation recommendations for Azure resources - Microsoft](https://learn.microsoft.com/nb-no/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
-
+Tabellen under viser et eksempel på hvordan navnestrukturen for ressurser i Azure kan se ut.  
 
 | Azure Ressurs      | Forkortelse   | Miljø         | Applikasjon, prosjekt eller funksjon    | Fullstendig navn for Ressurs                    |
 |--------------------|---------------|---------------|-----------------------------------------|-------------------------------------------------|
