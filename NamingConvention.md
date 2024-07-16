@@ -85,8 +85,7 @@ Hver ressurstype eller tjenestetype i Azure innebærer et sett med navnerestriks
 Generelt bør du unngå å ha spesialtegn (- eller _) som første eller siste tegn i noe navn, da disse vil feile de fleste valideringsregler.
 I tabellen under ser man en rekke ressurser som finnes i Azure, i tillegg til 
 
- [For å lese mer om restriksjoner og krav for navn for ressurser, se her:](Naming rules and restrictions for Azure resources)
- For å lese mer om restriksjoner og krav for navn for ressurser, se her: [Naming rules and restrictions for Azure resources - Microsoft](Naming rules and restrictions for Azure resources - Microsoft).
+ For å lese mer om restriksjoner og krav for navn for ressurser, se her: [Naming rules and restrictions for Azure resources - Microsoft](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
 
 
 | Kategori      | Tjeneste eller Enhet         | Omfang          | Lengde                    | Skriftform          | Gyldige Tegn                                | Foreslått Mønster                           |
@@ -112,7 +111,16 @@ I tabellen under ser man en rekke ressurser som finnes i Azure, i tillegg til
 | Nettverk      | Lastbalanseringsregler      | Lastbalanserer   | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `descriptive context`                       |
 
 
+Navnestruktur: 
+`<applikasjon, prosjekt eller funksjon>-<miljø>-<ressurs-forkortelse><0-99>` skrives med små bokstaver.
 
+Når det gjelder <ressurs-forkortelse> tar man utgangspunkt i Microsoft sine anbefalinger. Les mer om disse her: [Abbreviation recommendations for Azure resources - Microsoft](https://learn.microsoft.com/nb-no/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
+
+
+| Azure Ressurs      | Forkortelse   | Miljø         | Applikasjon, prosjekt eller funksjon    | Fullstendig navn for Ressurs                    |
+|--------------------|---------------|---------------|-----------------------------------------|-------------------------------------------------|
+| Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm01
+| Load Balancer      | lb            | prod          | B024 (eksempel på prosjekt)             | b024-prod-lb01
 
 
 
