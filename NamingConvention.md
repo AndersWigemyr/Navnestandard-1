@@ -119,8 +119,52 @@ Når det gjelder <ressurs-forkortelse> tar man utgangspunkt i Microsoft sine anb
 
 | Azure Ressurs      | Forkortelse   | Miljø         | Applikasjon, prosjekt eller funksjon    | Fullstendig navn for Ressurs                    |
 |--------------------|---------------|---------------|-----------------------------------------|-------------------------------------------------|
-| Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm01
-| Load Balancer      | lb            | prod          | B024 (eksempel på prosjekt)             | b024-prod-lb01
+| Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm01                     |
+| Load Balancer      | lb            | prod          | B024 (eksempel på prosjekt)             | b024-prod-lb01                                  |
+| Piblic IP Address  | pip           | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-pip01                    |
+| Virtul Machine     | vm            | utv           | teamsbestilling                         | teamsbestilling-utv-vm01                        |
+| Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm02                     |
+
+
+## Navnestandard for grupper i Entra ID (tidl. Azure Active Directory (AAD))
+
+Entra ID, tidligere kjent som Azure Active Directory (AAD), er en skybasert identitets- og tilgangsstyringstjeneste som gir en rekke funksjoner for å administrere brukere og grupper i organisasjonen din. Grupper i Entra ID brukes til å administrere tilgang til ressurser ved å samle brukere som trenger lignende rettigheter. Hver gruppe kan ha en unik ID og kan være assosiert med spesifikke avdelinger, prosjekter eller funksjoner innen organisasjonen.
+
+### Viktigheten rundt en konsekvent- og veldefinert navnestandard i Entra ID
+
+En konsekvent og veldefinert navnestandard for grupper i Entra ID (tidligere Azure Active Directory) er avgjørende for flere grunner:
+
+1. **Enklere Administrasjon**:
+   - Klare og konsistente gruppenavn gjør det lettere for IT-administratorer å opprette, vedlikeholde og administrere grupper. Dette reduserer tiden og innsatsen som kreves for å håndtere brukertilgang og tillatelser.
+
+2. **Forbedret Sikkerhet**:
+   - Ved å bruke standardiserte navn kan du lettere identifisere og administrere sikkerhetsinnstillinger og tilgangskontroller. Dette bidrar til å redusere risikoen for feilkonfigurasjoner som kan føre til sikkerhetsbrudd.
+
+3. **Bedre Oversikt og Organisering**:
+   - Standardiserte navn gir en bedre oversikt over hvilke grupper som finnes, og deres tilhørende funksjoner eller avdelinger. Dette er spesielt nyttig i store organisasjoner med mange grupper.
+
+4. **Effektiv Feilsøking**:
+   - Når gruppenavnene klart indikerer deres formål og tilhørighet, blir det enklere å feilsøke problemer relatert til tilgang og rettigheter. Dette gjør det også lettere å gjennomføre revisjoner og kontrollere samsvar med retningslinjer.
+
+5. **Skalerbarhet**:
+   - En veldefinert navnestandard gjør det lettere å skalere IT-miljøet når organisasjonen vokser. Nye grupper kan enkelt opprettes og integreres i eksisterende systemer uten å skape forvirring eller konflikter.
+
+6. **Redusert Risiko for Feil**:
+   - En standardisert tilnærming minimerer risikoen for feil ved opprettelse og administrasjon av grupper. Dette bidrar til å sikre at riktige brukere har tilgang til riktige ressurser.
+
+*Ved å implementere en standardisert navnekonvensjon for grupper i Entra ID, kan organisasjonen oppnå en mer effektiv og sikker administrasjon av brukerrettigheter og tilganger, samtidig som man sikrer samsvar med interne og eksterne retningslinjer og krav.*
+
+## Forslag til navnestandard for grupper i Entra ID (tidl. Azure Active Directory (AAD))
+
+
+
+
+
+
+
+
+
+
 
 
 
