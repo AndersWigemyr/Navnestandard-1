@@ -1,6 +1,7 @@
 # Spørsmål før ferdigstilling av dokument
 - Hvor mange subscriptions tenker man å ha i miljøet? Skal det være en del så bør man ha Management Groups.
 - Hvor mange avdelinger skal inn å bruke miljøet?
+- Er det behov for lengre/mer omfattende navnestruktur? Krever det bedre muligheter for å skille ressurser fra hverandre?
 
 #  Forslag til navnekonvensjon for Azure/Microsoft 365 miljø
 Dette dokumentet beskriver et **forslag** til navnestandarder som skal brukes i Azure og Microsoft 365 (M365) miljøer. Konsistente navnestandarder er avgjørende for enkel administrasjon, feilsøking, sikkerhet, og for å sikre at ressursene er lett gjenkjennelige.
@@ -89,34 +90,6 @@ Navnestruktur:
 
 Når det gjelder <ressurs-forkortelse> tar man utgangspunkt i Microsoft sine anbefalinger. Les mer om disse her: [Abbreviation recommendations for Azure resources - Microsoft](https://learn.microsoft.com/nb-no/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
 
-Generelt bør du unngå å ha spesialtegn (- eller _) som første eller siste tegn i noe navn, da disse vil feile de fleste valideringsregler.
-I tabellen under ser man en rekke ressurser som finnes i Azure, i tillegg til 
-
-For å lese mer om restriksjoner og krav for navn for ressurser, se her: [Naming rules and restrictions for Azure resources - Microsoft](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
-
-
-| Kategori      | Tjeneste eller Enhet         | Omfang          | Lengde                    | Skriftform          | Gyldige Tegn                                | Foreslått Mønster                           |
-|---------------|-----------------------------|------------------|---------------------------|---------------------|---------------------------------------------|--------------------------------------------|
-| Ressursgruppe | Ressursgruppe               | Global           | 1-64                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, understrek og bindestrek     | `<service short name>-<environment>-rg`     |
-| Ressursgruppe | Tilgjengelighetssett        | Ressursgruppe    | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, understrek og bindestrek     | `<service-short-name>-<context>-as`         |
-| Generelt      | Tag                         | Tilknyttet Enhet | 512 (navn), 256 (verdi)  | Ikke skille mellom store og små bokstaver | Alfanumerisk                              | `"key" : "value"`                           |
-| Beregning     | Virtuell Maskin             | Ressursgruppe    | 1-15                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, understrek og bindestrek     | `<name>-<role>-<instance>`                  |
-| Lagring       | Lagringskontonavn (data)    | Global           | 3-24                      | Små bokstaver        | Alfanumerisk                              | `<service short name><type><number>`        |
-| Lagring       | Lagringskontonavn (disker)  | Global           | 3-24                      | Små bokstaver        | Alfanumerisk                              | `<vm name without dashes>st<number>`        |
-| Lagring       | Container navn              | Lagringskonto    | 3-63                      | Små bokstaver        | Alfanumerisk og bindestrek                | `<context>`                                 |
-| Lagring       | Blob navn                   | Container        | 1-1024                    | Skille mellom store og små bokstaver | Alle URL-tegn                              | `<variable based on blob usage>`            |
-| Lagring       | Kø navn                     | Lagringskonto    | 3-63                      | Små bokstaver        | Alfanumerisk og bindestrek                | `<service short name>-<context>-<num>`      |
-| Lagring       | Tabell navn                 | Lagringskonto    | 3-63                      | Ikke skille mellom store og små bokstaver | Alfanumerisk                              | `<service short name>-<context>`            |
-| Lagring       | Fil navn                    | Lagringskonto    | 3-63                      | Små bokstaver        | Alfanumerisk                              | `<variable based on blob usage>`            |
-| Nettverk      | Virtuelt Nettverk (VNet)    | Ressursgruppe    | 2-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `<service short name>-[section]-vnet`       |
-| Nettverk      | Subnett                     | Overordnet VNet  | 2-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, understrek, bindestrek og punktum | `<role>-subnet`                            |
-| Nettverk      | Nettverksgrensesnitt        | Ressursgruppe    | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `<vmname>-<num>nic`                         |
-| Nettverk      | Nettverkssikkerhetsgruppe   | Ressursgruppe    | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `<service short name>-<context>-nsg`        |
-| Nettverk      | Nettverkssikkerhetsgrupperegel | Ressursgruppe   | 1-80                   | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `<descriptive context>`                     |
-| Nettverk      | Offentlig IP-adresse        | Ressursgruppe    | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `<vm or service name>-pip`                  |
-| Nettverk      | Lastbalanserer              | Ressursgruppe    | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `<service or role>-lb`                      |
-| Nettverk      | Lastbalanseringsregler      | Lastbalanserer   | 1-80                      | Ikke skille mellom store og små bokstaver | Alfanumerisk, bindestrek, understrek og punktum | `descriptive context`                       |
-
 Tabellen under viser et eksempel på hvordan navnestrukturen for ressurser i Azure kan se ut.  
 
 | Azure Ressurs      | Forkortelse   | Miljø         | Applikasjon, prosjekt eller funksjon    | Fullstendig navn for Ressurs                    |
@@ -127,6 +100,26 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for ressurser i Azu
 | Virtul Machine     | vm            | utv           | teamsbestilling                         | teamsbestilling-utv-vm01                        |
 | Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm02                     |
 
+Generelt bør du unngå å ha spesialtegn (- eller _) som første eller siste tegn i noe navn, da disse vil feile de fleste valideringsregler.
+I tabellen under ser man en rekke ressurser som finnes i Azure, i tillegg til 
+
+I tabellen under ser man eksempler på noen av de mest vanlige ressurser som kan opprettes i Azure i tillegg til deres restriksjoner for navn:
+
+| Kategori        | Tjeneste eller Enhet     | Omfang           | Lengde på ressursnavn         | Skriftform                                   | Gyldige tegn                                     |
+|-----------------|--------------------------|------------------|-------------------------------|----------------------------------------------|--------------------------------------------------|
+| Ressursgruppe   | Ressursgruppe            | Global           | 1-64                          | Skiller ikke mellom store og små bokstaver   | Alfanumerisk, understrek og bindestrek           |
+| Databehandling  | Virtuell Maskin          | Ressursgruppe    | 1-15 (Windows), 1-64 (Linux)  | Skiller ikke mellom store og små bokstaver   | Alfanumerisk, understrek og bindestrek           |
+| Lagring         | Lagringskontonavn        | Global           | 3-24                          | Små bokstaver                                | Alfanumerisk                                     |
+| Nettverk        | Virtuelt Nettverk (VNet) | Ressursgruppe    | 2-80                          | Skiller ikke mellom store og små bokstaver   | Alfanumerisk, bindestrek, understrek og punktum  |
+| Nettverk        | Subnett                  | Overordnet VNet  | 2-80                          | Skiller ikke mellom store og små bokstaver   | Alfanumerisk, understrek, bindestrek og punktum  |
+| Database        | Azure SQL Database       | Server           | 1-128                         | Skiller ikke mellom store og små bokstaver   | Alfanumerisk, understrek og bindestrek           |
+| Apptjeneste     | Web App                  | Global           | 1-60                          | Små bokstaver                                | Alfanumerisk, bindestrek                         |
+| Generelt        | Tag                      | Tilknyttet Enhet | 512 (navn), 256 (verdi)       | Skiller ikke mellom store og små bokstaver   | Alfanumerisk                                     |
+
+*Skiller ikke mellom store og små bokstaver betyr at systemet ikke gjør forskjell på store og små bokstaver i navnene på ressurser. Dette innebærer at en ressurs med navnet "MinRessurs" behandles som identisk med "minressurs" eller "MINRESSURS".*
+
+
+For å lese mer om restriksjoner og krav for navn for ressurser, se her: [Naming rules and restrictions for Azure resources - Microsoft](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
 
 ## Navnestandard for grupper i Entra ID (tidl. Azure Active Directory (AAD))
 
@@ -158,7 +151,23 @@ En konsekvent og veldefinert navnestandard for grupper i Entra ID (tidligere Azu
 
 ## Forslag til navnestandard for grupper i Entra ID (tidl. Azure Active Directory (AAD))
 
+Navnestrukturer: 
 
+Generell: `{avdeling}-{miljø}-{funksjon}-{rolle/hensikt/område}` skrives med små bokstaver.
+For PIM: `{avdeling}-{miljø}-{funksjon}-{rolle}-{ressursgruppe/subscription eller ressurs)` skrives med små bokstaver.
+
+Tabellen under viser et par eksempel på hvordan navnestrukturen for ressurser i Azure kan se ut.  
+!! Trenger innspill rundt navnestruktur for grupper i Entra ID. 
+
+| Kategori                                 | Navnestruktur                                          | Hensikt                                                           | Fullstendig navn på Entra ID gruppe                 |
+|------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------|
+| Tilgangsgrupper (PIM for rolle)          | `{avdeling}-{miljø}-pim-{rolle/hensikt/område}`        | PIM Gruppe for Security Reader                                    | `tss-prod-pim-securityreader`                       |                  
+| Tilgangsgrupper (PIM for ressurstilgang) | `{avdeling}-{miljø}-pim-{rolle/hensikt/område}`        | Contributor tilgang i ressursgruppen "contoso-hrsystem-utv-rg"    | `tma-utv-pim-contributor-contoso-hrsystem-utv-rg`   |
+| Sikkerhetsgrupper (security gruppe)      | `{avdeling}-{miljø}-sec-{rolle/hensikt/område}`        | Sikkerhetsgruppe for brukere til VPN-løsning                      | `tma-prod-sec-vpn`                                  |
+| Prosjektgrupper                          | `{avdeling}-{miljø}-prosjekt-{rolle/hensikt/område}`   | Prosjektgruppe for B024-prosjektet                                | `tikt-utv-prosjekt-b024`                            |
+| SharePoint-grupper                       | `{avdeling}-{miljø}-sp-{rolle/hensikt/område}`         | SharePoint gruppe for Intranet                                    | `tss-prod-sp-intranet`                              | 
+| Exchange grupper                         | `{avdeling}-{miljø}-exchange-{rolle/hensikt/område}`   | Exchange gruppe for brukere som behøver videresendelsesregel      | `tma-utv-exchange-videresendelsesregel`             |
+| Microsoft 365 grupper                    | `{avdeling}-{miljø}-m365-{rolle/hensikt/område}`       | Microsoft 365 (samarbeidsgruppe) for TSS-avdelingen               | `tikt-prod-m365-tss`                                |
 
 
 
