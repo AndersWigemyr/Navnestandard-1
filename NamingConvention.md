@@ -153,7 +153,7 @@ En konsekvent og veldefinert navnestandard for grupper i Entra ID (tidligere Azu
 
 Navnestrukturer: 
 
-Generell: `{avdeling}-{miljø}-{funksjon}-{rolle/hensikt/område}` skrives med små bokstaver.
+Generell: `{avdeling}-{miljø}-{funksjon}-{rolle/hensikt/område}` skrives med små bokstaver.  
 For PIM: `{avdeling}-{miljø}-{funksjon}-{rolle}-{ressursgruppe/subscription eller ressurs)` skrives med små bokstaver.
 
 Tabellen under viser et par eksempel på hvordan navnestrukturen for ressurser i Azure kan se ut.  
