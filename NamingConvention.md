@@ -63,10 +63,6 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for tags kan se ut.
 ### Policy for Tags
 En tagging policy i Azure er en regel eller et sett med regler som automatisk sørger for at ressurser blir merket med spesifikke tagger når de opprettes eller oppdateres. Disse reglene hjelper med å sikre at alle ressurser følger samme standard for tagging, noe som gjør det lettere å organisere, finne og administrere dem på tvers av organisasjonen. Når en ressurs opprettes i Azure kan man kreve at diverse tagger er lagt på denne ressursen *(eksempel at det må kreve en forvaltesAv- eller miljø-tag)*.
 
-
-## Navnestandard for Azure Ressurser
-Ressurser i Azure refererer til de ulike komponentene som kan opprettes, administreres og brukes innenfor Azure-plattformen, som virtuelle maskiner, databaser, lagringskontoer, nettverk, og app-tjenester.
-
 ## Forslag til navnestandard for Azure Ressursgrupper
 
 Navnestruktur: 
@@ -82,7 +78,7 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for ressursgrupper 
 | Contoso | utv   | B024 *(eksempel på prosjekt)*        | contoso-b024-utv-rg                   |
 
 
-# Forslag til navnestandard for Ressurser i Azure
+## Forslag til navnestandard for Ressurser i Azure
 Hver ressurstype eller tjenestetype i Azure innebærer et sett med navnerestriksjoner og omfang; enhver navnekonvensjon eller mønster må overholde de nødvendige navnerestriksjonene og omfanget. For eksempel, mens navnet på en VM knyttes til et DNS-navn (og derfor må være unikt over hele Azure), er navnet på et VNET (virtuelt nettverk) begrenset til Ressursgruppen det er opprettet i, og kan derfor ha et samme navn i en annen ressursgruppe.
 
 Navnestruktur: 
