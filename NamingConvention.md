@@ -90,7 +90,7 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for ressurser i Azu
 
 | Azure Ressurs      | Forkortelse   | Miljø         | Applikasjon, prosjekt eller funksjon    | Fullstendig navn for Ressurs                    |
 |--------------------|---------------|---------------|-----------------------------------------|-------------------------------------------------|
-| Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm01                     |
+| Virtual Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm01                     |
 | Load Balancer      | lb            | prod          | B024 (eksempel på prosjekt)             | b024-prod-lb01                                  |
 | Piblic IP Address  | pip           | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-pip01                    |
 | Virtul Machine     | vm            | utv           | teamsbestilling                         | teamsbestilling-utv-vm01                        |
@@ -166,23 +166,7 @@ Tabellen under viser et par eksempel på hvordan navnestrukturen for ressurser i
 | Microsoft 365 grupper                    | `{avdeling}-{miljø}-m365-{rolle/hensikt/område}`       | Microsoft 365 (samarbeidsgruppe) for TSS-avdelingen               | `tikt-prod-m365-tss`                                |
 
 
+<p>&nbsp;</p>
+Dokumentet er under oppdatering ...
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Trenger innspill og innsikt på hva som gjenstår av navnestandard.
