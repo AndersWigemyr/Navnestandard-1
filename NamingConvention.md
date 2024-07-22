@@ -147,8 +147,6 @@ En konsekvent og veldefinert navnestandard for grupper i Entra ID (tidligere Azu
 
 ## Forslag til navnestandard for grupper i Entra ID (tidl. Azure Active Directory (AAD))
 
-Navnestrukturer: 
-
 Generell: `{avdeling}-{miljø}-{funksjon}-{rolle/hensikt/område}` skrives med små bokstaver.  
 For PIM: `{avdeling}-{miljø}-{funksjon}-{rolle}-{ressursgruppe/subscription eller ressurs)` skrives med små bokstaver.
 
@@ -170,3 +168,6 @@ Tabellen under viser et par eksempel på hvordan navnestrukturen for ressurser i
 Dokumentet er under oppdatering ...
 
 Trenger innspill og innsikt på hva som gjenstår av navnestandard.
+
+- Conditional Access
+- Compliance, Intune og andre admin-portaler når det kommer til konfigurasjons- og policynavn.
