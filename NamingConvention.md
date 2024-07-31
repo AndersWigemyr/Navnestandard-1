@@ -97,7 +97,6 @@ Tabellen under viser et eksempel på hvordan navnestrukturen for ressurser i Azu
 | Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm02                     |
 
 Generelt bør du unngå å ha spesialtegn (- eller _) som første eller siste tegn i noe navn, da disse vil feile de fleste valideringsregler.
-I tabellen under ser man en rekke ressurser som finnes i Azure, i tillegg til 
 
 I tabellen under ser man eksempler på noen av de mest vanlige ressurser som kan opprettes i Azure i tillegg til deres restriksjoner for navn:
 
@@ -169,5 +168,6 @@ Dokumentet er under oppdatering ...
 
 Trenger innspill og innsikt på hva som gjenstår av navnestandard.
 
+Forslag:
 - Conditional Access
 - Compliance, Intune og andre admin-portaler når det kommer til konfigurasjons- og policynavn.
