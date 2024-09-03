@@ -27,16 +27,15 @@ Et Azure Subscription er en konto som gir tilgang til Azure-tjenester og fungere
 Under er et forslag til navnestandard for alle subscriptions som blir opprettet i Azure miljøet. 
 
 Navnestruktur: 
-`{selskap}-{avdeling eller prosjekt (valgfritt)}-{miljo}-sub` skrives med små bokstaver.
+`{miljo}-sub` skrives med små bokstaver.
 
 Tabellen under viser et eksempel på hvordan navnestrukturen for subscriptions kan se ut.
-
-| Selskap | Avdeling eller Prosjekt (valgfritt) | Miljø | Subscription Navn           |
-|---------|-------------------------------------|-------|-----------------------------|
-| Contoso | TSS                                 | utv   | contoso-tss-utv-sub         |
-| Contoso | TIKT                                | prod  | contoso-tikt-prod-sub       |
-| Contoso | TMA                                 | utv   | contoso-tma-utv-sub         |
-| Contoso | B024 *(eksempel på prosjekt)*       | utv   | contoso-b024-utv-sub        |
+| Miljø | Subscription Navn  |
+|-------|--------------------|
+| utv   | utv-sub            |
+| prod  | prod-sub           |
+| utv   | utv-sub            |
+| utv   | utv-sub            |
 
 ## Navnestandard for Tags
 Tags i Azure brukes til å organisere og kategorisere ressurser, noe som gjør administrasjon og rapportering enklere og mer effektivt.
@@ -66,35 +65,34 @@ En tagging policy i Azure er en regel eller et sett med regler som automatisk s�
 ## Forslag til navnestandard for Azure Ressursgrupper
 
 Navnestruktur: 
-`{selskap}-{miljø}-{applikajon, prosjekt eller funksjon}-rg` skrives med små bokstaver.
+`{applikasjonsnavn, prosjekt eller funksjon}-{miljø}-rg` skrives med små bokstaver.
 
 Tabellen under viser et eksempel på hvordan navnestrukturen for ressursgrupper kan se ut.  
 
-| Selskap | Miljø | Applikasjon, prosjekt eller funksjon | Navn på ressursgruppe                 |
-|---------|-------|--------------------------------------|---------------------------------------|
-| Contoso | utv   | hrsystem                             | contoso-hrsystem-utv-rg               |
-| Contoso | prod  | analyseapplikasjon                   | contoso-analyseapplikasjon-prod-rg    |
-| Contoso | utv   | teamsbestilling                      | contoso-teamsbestilling-utv-rg        |
-| Contoso | utv   | B024 *(eksempel på prosjekt)*        | contoso-b024-utv-rg                   |
-
+| Applikasjonsnavn, prosjekt eller funksjon | Miljø | Navn på ressursgruppe                 |
+|-------------------------------------------|-------|---------------------------------------|
+| hrsystem                                  | prod  | hrsystem-utv-rg               |
+| analyseapplikasjon                        | utv   | analyseapplikasjon-prod-rg    |
+| teamsbestilling                           | utv   | teamsbestilling-utv-rg        |
+| B024 *(eksempel på prosjekt)*             | utv   | b024-utv-rg                   |
 
 ## Forslag til navnestandard for Ressurser i Azure
 Hver ressurstype eller tjenestetype i Azure innebærer et sett med navnerestriksjoner og omfang; enhver navnekonvensjon eller mønster må overholde de nødvendige navnerestriksjonene og omfanget. For eksempel, mens navnet på en VM knyttes til et DNS-navn (og derfor må være unikt over hele Azure), er navnet på et VNET (virtuelt nettverk) begrenset til Ressursgruppen det er opprettet i, og kan derfor ha et samme navn i en annen ressursgruppe.
 
 Navnestruktur: 
-`<applikasjon, prosjekt eller funksjon>-<miljø>-<ressurs-forkortelse><0-99>` skrives med små bokstaver.
+`<applikasjonnavn eller prosjekt>-<miljø>-{funksjon}-<ressurs-forkortelse>` skrives med små bokstaver.
 
 Når det gjelder <ressurs-forkortelse> tar man utgangspunkt i Microsoft sine anbefalinger. Les mer om disse her: [Abbreviation recommendations for Azure resources - Microsoft](https://learn.microsoft.com/nb-no/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
 
 Tabellen under viser et eksempel på hvordan navnestrukturen for ressurser i Azure kan se ut.  
 
-| Azure Ressurs      | Forkortelse   | Miljø         | Applikasjon, prosjekt eller funksjon    | Fullstendig navn for Ressurs                    |
-|--------------------|---------------|---------------|-----------------------------------------|-------------------------------------------------|
-| Virtual Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm01                     |
-| Load Balancer      | lb            | prod          | B024 (eksempel på prosjekt)             | b024-prod-lb01                                  |
-| Piblic IP Address  | pip           | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-pip01                    |
-| Virtul Machine     | vm            | utv           | teamsbestilling                         | teamsbestilling-utv-vm01                        |
-| Virtul Machine     | vm            | utv           | analyseapplikasjon                      | analyseapplikasjon-utv-vm02                     |
+| Azure Ressurs      | Forkortelse   | Miljø         | Applikasjonsnavn eller prosjekt    | Funksjon         | Fullstendig navn for Ressurs                    |
+|--------------------|---------------|---------------|-------------------------------------------------------|-------------------------------------------------|
+| Virtual Machine    | vm            | utv           | analyseapplikasjon                 | publisernyheter  | analyseapplikasjon-utv-vm01                     |
+| Load Balancer      | lb            | prod          | B024 (eksempel på prosjekt)        | balensertrafikk  | b024-prod-lb01                                  |
+| Piblic IP Address  | pip           | utv           | analyseapplikasjon                 | analyserer       | analyseapplikasjon-utv-pip01                    |
+| Virtul Machine     | vm            | utv           | teamsbestilling                    | teamsbestilling  | teamsbestilling-utv-vm01                        |
+| Virtul Machine     | vm            | utv           | analyseapplikasjon                 | analyserer       | analyseapplikasjon-utv-vm02                     |
 
 Generelt bør du unngå å ha spesialtegn (- eller _) som første eller siste tegn i noe navn, da disse vil feile de fleste valideringsregler.
 
@@ -162,8 +160,6 @@ Tabellen under viser et par eksempel på hvordan navnestrukturen for ressurser i
 | Exchange grupper                         | `{avdeling}-{miljø}-exchange-{rolle/hensikt/område}`   | Exchange gruppe for brukere som behøver videresendelsesregel      | `tma-utv-exchange-videresendelsesregel`             |
 | Microsoft 365 grupper                    | `{avdeling}-{miljø}-m365-{rolle/hensikt/område}`       | Microsoft 365 (samarbeidsgruppe) for TSS-avdelingen               | `tikt-prod-m365-tss`                                |
 
-
-<p>&nbsp;</p>
 Dokumentet er under oppdatering ...
 
 Trenger innspill og innsikt på hva som gjenstår av navnestandard.
